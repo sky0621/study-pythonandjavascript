@@ -1,0 +1,8 @@
+類似点
+・インタプリタ
+・GCあり
+・関数が第一級要素
+
+相違点
+・JavaScriptは単一スレッドで非ブロッキング言語で非同期I/Oを使う（＝コールバック関数多用）
+・変数名：JSはキャメルケース（f.e. processStudentData）でPythonはPEP8に従いアンダースコア（process_student_data）
