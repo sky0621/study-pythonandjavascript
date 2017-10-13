@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+
+var Citizen = function(name, country){
+    this.name = name;
+    this.country = country;
+}
+
+// Citizenから派生したすべてのオブジェクトに適用される
+Citizen.prototype = {
+    printDetails: function(){
+        console.log('Citizen ' + this.name + ' from ' + this.country);
+    }
+};
+
+var c = new Citizen('Groucho M.', 'Freedonia');
+
+c.printDetails();
+
+</script>
+</body>
+</html>
