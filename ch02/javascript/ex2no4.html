@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+</head>
+
+<body>
+    <script>
+        var items = ['F','C','C','A','B','A','C','E','F']
+        console.log(_.countBy(items));
+
+        journeys = [
+            {period:'morning', times:[44, 34, 56, 31]},
+            {period:'evening', times:[35, 33]},
+            {period:'morning', times:[33, 29, 35, 41]},
+            {period:'evening', times:[24, 45, 27]},
+            {period:'morning', times:[18, 23, 28]},
+        ]
+        var groups = _.groupBy(journeys, 'period');
+        console.log(groups);
+        var mTimes = _.pluck(groups['morning'], 'times');
+        console.log(mTimes);
+        mTimes = _.flatten(mTimes);
+        console.log(mTimes);
+        var average = function(l){
+            var sum = _.reduce(l, function(a,b){return a+b},0);
+            return sum/l.length;
+        };
+        console.log(average(mTimes));
+    </script>
+</body>
+</html>
