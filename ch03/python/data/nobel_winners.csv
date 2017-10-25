@@ -1,4 +1,4 @@
-sex,name,nationality,category,year
-male,Albert Einstein,Swiss,Physics,1921
-male,Paul Dirac,British,Physics,1933
-female,Marie Curie,Polish,Chemistry,1911
+name,year,sex,category,nationality
+Albert Einstein,1921,male,Physics,Swiss
+Paul Dirac,1933,male,Physics,British
+Marie Curie,1911,female,Chemistry,Polish
