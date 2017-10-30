@@ -1,5 +1,8 @@
 from sqlalchemy import Column, Integer, String, Enum
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine
+
+engine = create_engine('sqlite:///data/nobel_prize.db', echo=True)
 
 Base = declarative_base()
 
@@ -15,3 +18,5 @@ class Winner(Base):
 
     def __repr__(self):
         return "<Winner(name='%s', category='%s', year='%s')>"%(self.name, self.category, self.year)
+
+Base.metadata.create_all(engine)
